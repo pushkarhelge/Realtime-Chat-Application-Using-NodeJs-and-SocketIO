@@ -1,0 +1,122 @@
+
+ body {
+     margin: 0;
+     padding-bottom: 3rem;
+     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+ }
+
+ #form {
+     background: rgba(0, 0, 0, 0.15);
+     padding: 0.25rem;
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     display: flex;
+     height: 4rem;
+     box-sizing: border-box;
+     backdrop-filter: blur(10px);
+ }
+
+ #input {
+     border: none;
+     padding: 0 1rem;
+     flex-grow: 1rem;
+     border-radius: 2rem;
+     margin: 0.25rem;
+     width: 60%;
+     font-size: 1.15rem;
+ }
+
+ #uname {
+     padding: 0.6rem;
+     font-size: 1.25rem;
+     /* flex-grow: 0.3rem; */
+     border-radius: 2rem;
+     margin: 0.5rem;
+ }
+
+ #username {
+     padding: 1rem;
+     font-size: 1.5rem;
+     /* flex-grow: 0.3rem; */
+     border-radius: 1.5rem;
+     margin: 0.25rem;
+     width: 15vw;
+ }
+
+ #input:focus {
+     outline: none;
+ }
+
+ #form>button {
+     background: #333;
+     border-radius: 0.8rem;
+     padding: 0 1rem;
+     margin: 0.55rem;
+     outline: none;
+     color: #fff;
+     width: 5vw;
+     font-size: 1.2rem;
+ }
+
+ #messages {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+ }
+
+ #messages>li {
+     padding: 0.5rem 1rem;
+     margin-bottom: 0.5rem;
+     clear: both;
+     overflow: auto;
+ }
+
+ .sender {
+     float: right;
+     background-color: #DCF8C6;
+ }
+
+ .receiver {
+     float: left;
+     background-color: #E0E0E0;
+ }
+
+ .current-user .sender {
+     float: right;
+     background-color: #DCF8C6;
+ }
+
+ .current-user .receiver {
+     float: left;
+     background-color: #E0E0E0;
+ }
+
+ /* Style the logo and title */
+ .logo-container {
+     text-align: center;
+     padding: 1rem;
+ }
+
+ .logo {
+     width: 100%;
+     max-width: 60px;
+     display: inline-block;
+     vertical-align: middle;
+ }
+
+ .title {
+     font-size: 1.4rem;
+     font-family: "Segoe UI";
+     display: inline-block;
+     vertical-align: middle;
+ }
+
+ /* Style the timestamp */
+ .timestamp {
+     font-size: 12px;
+     color: #777;
+     float: right;
+     margin-left: 10px;
+ }

@@ -24,21 +24,26 @@
 // })
 
 
-const app = require('express')();
+
+
+const express = require('express');
+const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
-const host = process.env.HOST || 'localhost';
-const port = process.env.PORT || 3000;
 const path = require('path');
 
-const cors = require('cors');
+const host = process.env.HOST || 'localhost';
+const port = process.env.PORT || 80;
 
-// Enable CORS for all routes
-app.use(cors());
+// const ipAddress = '192.168.1.10';
+
 app.use((req, res, next) => {
     res.setHeader("Content-Security-Policy", "img-src 'self'");
     return next();
-  });
+});
+
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
